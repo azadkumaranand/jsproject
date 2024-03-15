@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crousel</title>
+</head>
+<style>
+    .container{
+        background-color: rgb(209, 255, 235);
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .coursel-img-box{
+        width: 200px;
+        height: 200px;
+    }
+    .coursel-img-box img{
+        height: inherit;
+        width: inherit;
+        border-radius: 100%;
+    }
+    .crousel-box1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .crousel-box{
+        width: 800px;
+        height: 500px;
+        background-color: aliceblue;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .crousel-box p:nth-child(4){
+        padding: 0 50px;
+    }
+    .button-box{
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="crousel-box">
+            <div class="crousel-box1">
+                
+            </div>
+            
+            <div class="button-box">
+                <button class="prev">Prev</button>
+                <button class="next">Next</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
