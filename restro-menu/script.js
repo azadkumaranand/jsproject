@@ -1,4 +1,4 @@
-const menuItems = [
+let menuItems = [
     {
         pdname: "Burgger",
         foodtype: 'lunch',
@@ -43,13 +43,16 @@ const menuItems = [
     },
     {
         pdname: "Burgger 6",
-        foodtype: 'dinner',
+        foodtype: 'Shakes',
         desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis deleniti explicabo quasi sequi minus pariatur laboriosam id molestias vel a alias',
         price: 96,
         image: 'images/burger.jpeg'
     },
-]
+];
+
+const menuBarList = document.querySelectorAll('.menu-list ul li');
 const menuItemsBox = document.querySelector('.menu-items-box')
+
 menuItems.forEach(e => {
     menuItemsBox.innerHTML += `<div class="menu-box">
     <div class="card-img">
@@ -67,6 +70,37 @@ menuItems.forEach(e => {
 </div>`;
 });
 
+// console.log(menuBarList[1].innerText);
+menuBarList.forEach(listItem => {
+    listItem.addEventListener('click', ()=>{
+        const filterItems = menuItems.filter((item)=>{
+            if (listItem.innerText.trim().toLowerCase() == 'all') {
+                return item;
+            }else{
+                return item.foodtype.trim().toLowerCase() == listItem.innerText.trim().toLowerCase();
+            }
+        });
+        menuItemsBox.innerHTML = '';
+        filterItems.forEach(e => {
+            menuItemsBox.innerHTML += `<div class="menu-box">
+            <div class="card-img">
+                <img src="images/burger.jpeg">
+            </div>
+            <div class="card-content">
+                <div class="item-name">
+                    <p>${e.pdname}</p>
+                    <p>$${e.price}</p>
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis deleniti explicabo quasi sequi minus pariatur laboriosam id molestias vel a alias
+                </div>
+            </div>
+        </div>`;
+        });
+    })
+});
+
+
 // let a = "azad";
 
 // console.log(a);
@@ -74,3 +108,11 @@ menuItems.forEach(e => {
 // a="sultan";
 
 // console.log(a)
+
+const array = [20, 5, 74, 744, 12, 10, 17, 85, 16];
+
+const newFilterArray = array.filter((item)=>{
+    return item>18;
+});
+
+console.log(newFilterArray);
