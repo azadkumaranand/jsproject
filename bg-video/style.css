@@ -46,6 +46,7 @@
 
 .switch{
     position: absolute;
+    width: 100px;
     bottom: 100px;
     left: 50px;
     background-color: white;
@@ -58,9 +59,16 @@
 .switch p{
     padding: 5px 10px;
     color: #49a6e9;
+    width: 50%;
 }
 
 .active{
     background-color: #49a6e9;
     border-radius: 10px;
+    position: absolute;
+    /* padding: 5px 10px; */
+    width: 50px;
+    /* color: #49a6e9; */
+    height: 32.4px;
+    transition: all 0.4s ease-in-out;
 }

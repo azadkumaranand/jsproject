@@ -79,3 +79,17 @@ body{
     font-size: 1.2rem;
     letter-spacing: 2px;
 }
+
+
+@media(max-width: 960px){
+    .content-box{
+        flex-direction: column;
+    }
+    .content-img{
+        width: 100%;
+    }
+    .tabs-content{
+        width: 100%;
+        margin-top: 50px;
+    }
+}
